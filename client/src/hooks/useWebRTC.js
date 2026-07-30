@@ -18,13 +18,38 @@ import { useSocket } from './useSocket';
 import { useAuth } from './useAuth';
 import toast from 'react-hot-toast';
 
-// ICE Servers for STUN (gets public IP). 
-// In production, you also need TURN servers (relays data if firewalls block STUN).
+// ICE Servers: STUN (discover public IP) + TURN (relay when firewall blocks P2P)
+// TURN servers are critical in production — STUN alone fails behind most NATs.
 const ICE_SERVERS = {
   iceServers: [
+    // Multiple Google STUN servers as fallback
     { urls: 'stun:stun.l.google.com:19302' },
-    { urls: 'stun:global.stun.twilio.com:3478' }
+    { urls: 'stun:stun1.l.google.com:19302' },
+    { urls: 'stun:stun2.l.google.com:19302' },
+    { urls: 'stun:stun3.l.google.com:19302' },
+    // Free TURN relay servers (openrelay.metered.ca)
+    {
+      urls: 'turn:openrelay.metered.ca:80',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
+    {
+      urls: 'turn:openrelay.metered.ca:443',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
+    {
+      urls: 'turn:openrelay.metered.ca:443?transport=tcp',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
+    {
+      urls: 'turns:openrelay.metered.ca:443',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
   ],
+  iceCandidatePoolSize: 10,
 };
 
 export function useWebRTC(roomId, options = {}) {

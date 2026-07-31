@@ -766,7 +766,7 @@ function Footer() {
         </p>
 
         <a
-          href="https://github.com"
+          href="https://github.com/PrnvRdyy/Prnvrooms/tree/main"
           target="_blank"
           rel="noreferrer"
           style={{

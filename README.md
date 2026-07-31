@@ -1,157 +1,277 @@
-# 🎥 PrnvRooms — Real-Time Communication & Collaboration Platform
+# 🚀 Prnv Rooms
 
-> A production-deployed video conferencing & collaboration platform inspired by Zoom, Google Meet & Microsoft Teams. Built as a full-stack portfolio project.
+A modern **Real-Time Communication & Collaboration Platform** built with **React, Node.js, Express.js, MongoDB, Socket.IO, and WebRTC**. Prnv Rooms enables users to connect seamlessly through secure authentication, instant messaging, and video meetings.
 
-🔗 **Live Demo:** [YOUR_VERCEL_URL](https://YOUR_VERCEL_URL)  
-📦 **Backend API:** [prnvrooms.up.railway.app](https://prnvrooms.up.railway.app/api/health)
+🌐 **Live Demo:** https://prnvrooms.vercel.app/
 
----
-
-## ✨ Features
-
-| Feature | Description |
-|---|---|
-| 🔐 **Auth** | JWT Register / Login with access + refresh tokens |
-| 📅 **Meetings** | Create, join, leave & end meetings with unique room codes |
-| 🎥 **Video Calling** | Multi-user P2P video via WebRTC |
-| 💬 **Real-Time Chat** | In-meeting chat with emoji & typing indicators |
-| 🖥️ **Screen Sharing** | Share your screen with all participants |
-| 🎨 **Whiteboard** | Collaborative live-sync canvas drawing |
-| 📁 **File Sharing** | Upload, preview & download files in-meeting |
-| 🔔 **Notifications** | Real-time event notifications via Socket.io |
+📂 **GitHub Repository:** https://github.com/PrnvRdyy/Prnvrooms
 
 ---
 
-## 🛠 Tech Stack
+## 📖 Overview
 
-![React](https://img.shields.io/badge/React_18-61DAFB?style=flat&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white)
-![WebRTC](https://img.shields.io/badge/WebRTC-333333?style=flat&logo=webrtc&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-47A248?style=flat&logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat&logo=railway&logoColor=white)
+Prnv Rooms is a full-stack web application designed to deliver a seamless real-time communication experience. The platform integrates authentication, real-time messaging, and WebRTC-powered video communication into a clean, responsive interface.
+
+This project was built to gain hands-on experience with scalable backend architecture, real-time networking, and modern frontend development.
 
 ---
 
-## 🏗 Architecture
+# ✨ Features
 
+- 🔐 Secure JWT Authentication
+- 👤 User Registration & Login
+- 💬 Real-Time Chat using Socket.IO
+- 🎥 WebRTC Video Meetings
+- ⚡ Instant Message Delivery
+- 😊 Message Reactions
+- 📱 Responsive Design
+- 🛡️ Protected Routes
+- 🚀 Fast React + Vite Frontend
+- 📂 Modular Client & Server Architecture
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React.js
+- Vite
+- React Router DOM
+- Axios
+- Socket.IO Client
+- CSS3
+
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- Socket.IO
+- WebRTC Signaling
+
+## Deployment
+
+- Frontend – Vercel
+- Backend – Node.js Server
+- Database – MongoDB Atlas
+
+---
+
+# 📂 Project Structure
+
+```text
+PrnvRooms
+│
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+├── server/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── sockets/
+│   │   ├── utils/
+│   │   ├── app.js
+│   │   └── server.js
+│   ├── uploads/
+│   └── package.json
+│
+└── README.md
 ```
-┌──────────────────────────────────────────┐
-│              CLIENT (Vercel)             │
-│   React 18 + Vite + React Router v6     │
-└──────────┬───────────────────┬──────────┘
-           │ REST API          │ WebSocket
-           ▼                   ▼
-┌──────────────────────────────────────────┐
-│             SERVER (Railway)             │
-│   Node.js + Express + Socket.io          │
-│   WebRTC Signaling Server                │
-└──────────────────────┬───────────────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │  MongoDB Atlas  │
-              └─────────────────┘
-```
 
 ---
 
-## 🚀 Getting Started Locally
+# ⚙️ Installation
 
-### Prerequisites
-- Node.js 18+
-- MongoDB Atlas account
+## Clone the Repository
 
-### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/PrnvRooms.git
-cd PrnvRooms
+git clone https://github.com/PrnvRdyy/Prnvrooms.git
+cd Prnvrooms
 ```
 
-### 2. Setup the Server
-```bash
-cd server
-npm install
-cp .env.example .env   # fill in your values
-npm run dev
-```
+---
 
-### 3. Setup the Client
+## Install Dependencies
+
+### Frontend
+
 ```bash
 cd client
 npm install
-cp .env.example .env
-npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+### Backend
+
+```bash
+cd ../server
+npm install
+```
 
 ---
 
-## 🔧 Environment Variables
+# 🔑 Environment Variables
 
-### Server (`server/.env.example`)
-```env
-MONGO_URI=your_mongodb_atlas_uri
-PORT=5000
-NODE_ENV=development
-JWT_SECRET=your_jwt_secret
-JWT_REFRESH_SECRET=your_refresh_secret
-JWT_EXPIRES_IN=15m
-JWT_REFRESH_EXPIRES_IN=7d
-CLIENT_URL=http://localhost:5173
-```
+## Client (.env)
 
-### Client (`client/.env.example`)
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:5000
 VITE_SOCKET_URL=http://localhost:5000
 ```
 
 ---
 
-## 📂 Project Structure
+## Server (.env)
 
-```
-PrnvRooms/
-├── client/                  # React + Vite SPA
-│   ├── src/
-│   │   ├── components/      # Reusable UI components
-│   │   ├── pages/           # Route-level pages
-│   │   ├── services/        # API & socket layers
-│   │   └── hooks/           # Custom React hooks
-│   └── vercel.json
-│
-└── server/                  # Node.js + Express API
-    ├── src/
-    │   ├── routes/          # Express routes
-    │   ├── controllers/     # Handler logic
-    │   ├── middleware/      # Auth, error handling
-    │   ├── models/          # Mongoose schemas
-    │   └── sockets/         # Socket.io handlers
-    └── railway.json
+```env
+PORT=5000
+
+MONGODB_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+
+CLIENT_URL=http://localhost:5173
 ```
 
 ---
 
-## 🌐 Deployment
+# ▶️ Running the Project
 
-| Service | Platform | URL |
-|---|---|---|
-| Frontend | Vercel | `YOUR_VERCEL_URL` |
-| Backend | Railway | `https://prnvrooms.up.railway.app` |
-| Database | MongoDB Atlas | Cloud-hosted |
+### Start Backend
+
+```bash
+cd server
+npm run dev
+```
+
+### Start Frontend
+
+```bash
+cd client
+npm run dev
+```
 
 ---
 
-## 📄 License
+# 📸 Screenshots
 
-MIT — feel free to fork and build on top of this!
+## 🏠 Landing Page
+
+> *(Add Screenshot)*
 
 ---
 
-<p align="center">Built with ❤️ by Pranav</p>
+## 💬 Chat Interface
+
+> *(Add Screenshot)*
+
+---
+
+## 🎥 Video Meeting
+
+> *(Add Screenshot)*
+
+---
+
+## 👤 User Dashboard
+
+> *(Add Screenshot)*
+
+---
+
+# 📈 What I Learned
+
+Building Prnv Rooms helped me strengthen my understanding of:
+
+- Building scalable full-stack applications
+- JWT-based authentication
+- REST API development with Express.js
+- MongoDB database design
+- Real-time communication with Socket.IO
+- WebRTC signaling and peer connections
+- React component architecture
+- Custom Hooks
+- State Management
+- Production deployment
+
+---
+
+# 🚀 Future Improvements
+
+- 📺 Screen Sharing
+- 📁 File Sharing
+- 🎙️ Voice Channels
+- 🔔 Push Notifications
+- 🎨 Dark Mode
+- 🤖 AI Meeting Assistant
+- 🔒 End-to-End Encryption
+- 📹 Meeting Recording
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome!
+
+1. Fork the repository
+2. Create a new feature branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push your branch
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 👨‍💻 Developer
+
+**Pranav Reddy**
+
+- GitHub: https://github.com/PrnvRdyy
+- LinkedIn: https://linkedin.com/in/prnvrdyy
+
+---
+
+# ⭐ Show Your Support
+
+If you found this project helpful or interesting, consider giving it a **⭐ Star** on GitHub!
+
+It helps support my work and motivates me to build more open-source projects.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.

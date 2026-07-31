@@ -174,9 +174,9 @@ npm run dev
 
 # 📸 Screenshots
 
-## 🏠 Landing Page
+## 🏠 Login Page
 
-> *(Add Screenshot)*
+<img src="loginpage.png" width="900">
 
 ---
 

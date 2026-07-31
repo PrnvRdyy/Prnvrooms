@@ -180,21 +180,21 @@ npm run dev
 
 ---
 
-## 💬 Chat Interface
+## 💬 HomePage
 
-> *(Add Screenshot)*
+<img src="homepage.png" width="900">
 
 ---
 
-## 🎥 Video Meeting
+## 🎥 Meeting Interface
 
-> *(Add Screenshot)*
+<img src="meetingInterface.png" width="900">
 
 ---
 
 ## 👤 User Dashboard
 
-> *(Add Screenshot)*
+<img src="ProfilePage.png" width="900">
 
 ---
 

@@ -781,7 +781,7 @@ function Footer() {
           }}
         >
           <ExternalLink size={16} />
-          View on GitHub
+          View GitHub
         </a>
       </div>
     </footer>

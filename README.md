@@ -2,7 +2,7 @@
 
 A modern **Real-Time Communication & Collaboration Platform** built with **React, Node.js, Express.js, MongoDB, Socket.IO, and WebRTC**. Prnv Rooms enables users to connect seamlessly through secure authentication, instant messaging, and video meetings.
 
-🌐 **Live Demo:** https://prnvrooms.vercel.app/
+🌐 **Live Demo:** https://prnvrooms.vercel.app/ 
 
 📂 **GitHub Repository:** https://github.com/PrnvRdyy/Prnvrooms
 
